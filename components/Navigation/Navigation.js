@@ -32,6 +32,11 @@ export default function Navigation() {
                         </Link>
                     </li>
                     <li>
+                        <Link href="/formation" className={pathname === '/formation' ? `${styles.link} ${styles.active}` : styles.link}>
+                            Formations
+                        </Link>
+                    </li>
+                    <li>
                         <Link href="/contact" className={pathname === '/contact' ? `${styles.link} ${styles.active}` : styles.link}>
                             Contact
                         </Link>
