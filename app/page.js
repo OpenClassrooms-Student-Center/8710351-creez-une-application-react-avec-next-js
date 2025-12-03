@@ -1,4 +1,13 @@
 import styles from './page.module.css'
+import Tag from '../components/Tag/Tag'
+
+const technologies = [
+  'React',
+  'Next.js',
+  'Javascript',
+  'React Native',
+  'Node.js'
+];
 
 export default function Home() {
   return (
@@ -21,6 +30,11 @@ export default function Home() {
           <a href="#contact" className={`${styles.btn} ${styles.btnSecondary}`}>
             Me contacter
           </a>
+        </div>
+        <div className={styles.tagsContainer}>
+          {technologies.map((tech, index) => (
+            <Tag key={index}>{tech}</Tag>
+          ))}
         </div>
       </div>
     </div>
