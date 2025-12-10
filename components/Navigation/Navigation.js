@@ -48,8 +48,8 @@ export default function Navigation() {
                     </li>
                     <li>
                         <Link
-                            href="/projects"
-                            className={pathname.startsWith('/projects') ? `${styles.link} ${styles.active}` : styles.link}
+                            href="/projets"
+                            className={pathname.startsWith('/projets') ? `${styles.link} ${styles.active}` : styles.link}
                             onClick={closeMenu}
                         >
                             Projets
@@ -57,8 +57,8 @@ export default function Navigation() {
                     </li>
                     <li>
                         <Link
-                            href="/about"
-                            className={pathname === '/about' ? `${styles.link} ${styles.active}` : styles.link}
+                            href="/a-propos"
+                            className={pathname === '/a-propos' ? `${styles.link} ${styles.active}` : styles.link}
                             onClick={closeMenu}
                         >
                             À propos
