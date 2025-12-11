@@ -1,30 +1,10 @@
 import styles from './page.module.css'
-
-// Liste des formations (normalement, ça viendrait d'une API ou d'une base de données)
-const formations = {
-    'integrateur-web': {
-        title: 'Intégrateur Web',
-        description: 'Formation en Intégration Web. Apprenez à créer des sites web responsive et accessibles.',
-        details: ['Bac +2', '9 mois'],
-        image: '/images/integrateur.jpg'
-    },
-    'testeur-logiciel': {
-        title: 'Testeur Logiciel',
-        description: 'Formation en Test Logiciel. Assurez la qualité des applications avant leur mise en production.',
-        details: ['Bac +2', '9 mois'],
-        image: '/images/testeur.jpg'
-    },
-    'developpeur-low-code': {
-        title: 'Développeur Low-Code',
-        description: 'Formation en Développement Low-Code. Créez des applications rapidement sans coder (ou presque).',
-        details: ['Bac +2', '6 mois'],
-        image: '/images/lowcode.jpg'
-    }
-}
+import formationsData from '@/data/formations.json'
+import Tag from '@/components/Tag/Tag'
 
 export default async function FormationDetail({ params }) {
     const { slug } = await params
-    const formation = formations[slug]
+    const formation = formationsData.find((formation) => formation.slug === slug)
 
     // Si la formation n'existe pas, afficher un message
     if (!formation) {
@@ -53,15 +33,20 @@ export default async function FormationDetail({ params }) {
                 <div className={styles.details}>
                     <h2>Détails</h2>
                     <div className={styles.technologies}>
-                        {formation.details.map((detail, index) => (
-                            <span key={index} className={styles.tech}>
-                                {detail}
-                            </span>
+                        {formation.tags.map((tag, index) => (
+                            <Tag key={index} isDark={true}>{tag}</Tag>
                         ))}
                     </div>
                 </div>
             </div>
         </div>
     )
+}
+
+// Cette fonction génère toutes les pages statiques au build
+export function generateStaticParams() {
+    return formationsData.map((formation) => ({
+        slug: formation.slug,
+    }))
 }
 

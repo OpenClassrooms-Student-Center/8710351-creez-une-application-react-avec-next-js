@@ -2,10 +2,12 @@ import Link from "next/link"
 import styles from "./Card.module.css"
 import Tag from "../Tag/Tag"
 
-export default function Card({data}){
+export default function Card({data ,type}){
+
+    const link = type === "formation" ? `/formation/${data.slug}` : `/projets/${data.slug}`
     return (
         <Link 
-            href={`/projets/${data.slug}`}
+            href={link}
             key={data.id}
             className={styles.card}
         >

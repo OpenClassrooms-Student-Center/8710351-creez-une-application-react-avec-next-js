@@ -1,25 +1,26 @@
-{
-    "formations": [
+[
         {
             "id": 1,
             "title": "Intégrateur Web",
+            "slug": "integrateur-web",
             "description": "Formation en Intégration Web. Apprenez à créer des sites web responsive et accessibles.",
-            "details": ["Bac +2", "9 mois"],
-            "image": "/images/integrateur.jpg"
+            "tags": ["Bac +2", "9 mois"],
+            "image": "https://oc-static.imgix.net/prod/images/paths/illustrations/900/16994350954043_16564339214407_DEV_Web_Int_web%20%281%29.png?auto=compress,format&q=60&w=300"
         },
         {
             "id": 2,
             "title": "Testeur Logiciel",
+            "slug": "testeur-logiciel",
             "description": "Formation en Test Logiciel. Assurez la qualité des applications avant leur mise en production.",
-            "details": ["Bac +2", "9 mois"],
-            "image": "/images/testeur.jpg"
+            "tags": ["Bac +2", "9 mois"],
+            "image": "https://oc-static.imgix.net/prod/images/paths/illustrations/902/16994361034263_16781163594836_DEV_technicianlogicel.png?auto=compress,format&q=60&w=300&dpr=2"
         },
         {
             "id": 3,
             "title": "Développeur Low-Code",
+            "slug": "developpeur-low-code",
             "description": "Formation en Développement Low-Code. Créez des applications rapidement sans coder (ou presque).",
-            "details": ["Bac +2", "6 mois"],
-            "image": "/images/lowcode.jpg"
+            "tags": ["Bac +2", "6 mois"],
+            "image": "https://oc-static.imgix.net/prod/images/paths/illustrations/977/17461913883709_path_977%20copie%201-min.png?auto=compress,format&q=60&w=300&dpr=2"
         }
     ]
-}

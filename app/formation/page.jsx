@@ -1,13 +1,8 @@
-import Link from 'next/link'
-import styles from './page.module.css'
+import formationsData from '@/data/formations.json'
 import Card from '@/components/Card/Card'
 
 export default function Formations() {
-    const formations = [
-        { slug: 'integrateur-web', title: 'Intégrateur Web', description: 'Formation en Intégration Web', tags: ['Bac +2', '9 mois'] },
-        { slug: 'testeur-logiciel', title: 'Testeur Logiciel', description: 'Formation en Test Logiciel', tags: ['Bac +2', '9 mois'] },
-        { slug: 'developpeur-low-code', title: 'Développeur Low-Code', description: 'Formation en Développement Low-Code', tags: ['Bac +2', '6 mois'] }
-    ]
+    
 
     return (
         <div className="container">
@@ -17,8 +12,8 @@ export default function Formations() {
             </p>
 
             <div className="grid">
-                {formations.map((formation) => (
-                    <Card key={formation.slug} data={formation} />
+                {formationsData.map((formation) => (
+                    <Card key={formation.id} data={formation} type="formation" />
                 ))}
             </div>
         </div>
