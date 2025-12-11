@@ -1,0 +1,25 @@
+{
+    "formations": [
+        {
+            "id": 1,
+            "title": "Intégrateur Web",
+            "description": "Formation en Intégration Web. Apprenez à créer des sites web responsive et accessibles.",
+            "details": ["Bac +2", "9 mois"],
+            "image": "/images/integrateur.jpg"
+        },
+        {
+            "id": 2,
+            "title": "Testeur Logiciel",
+            "description": "Formation en Test Logiciel. Assurez la qualité des applications avant leur mise en production.",
+            "details": ["Bac +2", "9 mois"],
+            "image": "/images/testeur.jpg"
+        },
+        {
+            "id": 3,
+            "title": "Développeur Low-Code",
+            "description": "Formation en Développement Low-Code. Créez des applications rapidement sans coder (ou presque).",
+            "details": ["Bac +2", "6 mois"],
+            "image": "/images/lowcode.jpg"
+        }
+    ]
+}

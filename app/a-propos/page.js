@@ -2,19 +2,19 @@ import styles from './page.module.css'
 
 export default function About() {
     return (
-        <div className={styles.container}>
-            <h1 className={styles.title}>À propos de moi</h1>
+        <div className="container">
+            <h1 className="title">À propos de moi</h1>
 
             <div className={styles.content}>
                 <div className={styles.bio}>
                     <h2>Qui suis-je ?</h2>
                     <p>
-                        Développeur web passionné avec 3 ans d'expérience dans la création
-                        d'applications modernes et performantes. Spécialisé dans l'écosystème
+                        Développeur web passionné avec 3 ans d&apos;expérience dans la création
+                        d&apos;applications modernes et performantes. Spécialisé dans l&apos;écosystème
                         React et Next.js.
                     </p>
                     <p>
-                        J'aime transformer des idées en produits concrets qui résolvent
+                        J&apos;aime transformer des idées en produits concrets qui résolvent
                         de vrais problèmes utilisateurs.
                     </p>
                 </div>

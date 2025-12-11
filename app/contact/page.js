@@ -6,10 +6,10 @@ export default function Contact() {
 
 
     return (
-        <div className={styles.container}>
-            <h1 className={styles.title}>Me Contacter</h1>
-            <p className={styles.description}>
-                Une question ? Un projet ? N'hésitez pas à me contacter !
+        <div className="container">
+            <h1 className="title">Me Contacter</h1>
+            <p className="description">
+                Une question ? Un projet ? N&apos;hésitez pas à me contacter !
             </p>
 
             <div className={styles.contactWrapper}>

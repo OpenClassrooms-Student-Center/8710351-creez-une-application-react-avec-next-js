@@ -29,18 +29,18 @@ export default async function FormationDetail({ params }) {
     // Si la formation n'existe pas, afficher un message
     if (!formation) {
         return (
-            <div className={styles.container}>
+            <div className="container">
                 <h1>Formation non trouvée</h1>
-                <p>Cette formation n'existe pas ou a été supprimée.</p>
+                <p>Cette formation n&apos;existe pas ou a été supprimée.</p>
             </div>
         )
     }
 
     return (
-        <div className={styles.container}>
+        <div className="container">
             <div className={styles.header}>
-                <h1 className={styles.title}>{formation.title}</h1>
-                <p className={styles.description}>{formation.description}</p>
+                <h1 className="title">{formation.title}</h1>
+                <p className="description">{formation.description}</p>
             </div>
 
             <div className={styles.content}>
