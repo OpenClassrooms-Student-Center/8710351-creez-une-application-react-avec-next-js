@@ -1,5 +1,6 @@
-import Link from 'next/link'
+
 import styles from './page.module.css'
+import Card from '@/components/Card/Card'
 
 export default function Projects() {
     const projects = [
@@ -12,25 +13,12 @@ export default function Projects() {
         <div className={styles.container}>
             <h1 className={styles.title}>Mes Projets</h1>
             <p className={styles.description}>
-                Découvrez les projets sur lesquels j'ai travaillé
+                Découvrez les projets sur lesquels j&apos;ai travaillé
             </p>
 
             <div className={styles.grid}>
-                {projects.map((project) => (
-                    <Link
-                        href={`/projects/${project.slug}`}
-                        key={project.slug}
-                        className={styles.card}
-                    >
-                        <h2>{project.title}</h2>
-                        <p>{project.description}</p>
-                        <div className={styles.tags}>
-                            {project.tags.map((tag, index) => (
-                                <span key={index}>{tag}</span>
-                            ))}
-                        </div>
-                        <span className={styles.viewMore}>Voir le projet →</span>
-                    </Link>
+                {projects.map((project, index) => (
+                    <Card key={index} data={project} />
                 ))}
             </div>
         </div>

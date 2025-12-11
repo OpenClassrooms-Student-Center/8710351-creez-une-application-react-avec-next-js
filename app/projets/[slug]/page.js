@@ -1,4 +1,5 @@
 import styles from './page.module.css'
+import Tag from './../../../components/Tag/Tag'
 
 // Liste de projets (normalement, ça viendrait d'une API ou d'une base de données)
 const projects = {
@@ -38,7 +39,7 @@ export default async function ProjectDetail({ params }) {
         return (
             <div className={styles.container}>
                 <h1>Projet non trouvé</h1>
-                <p>Ce projet n'existe pas ou a été supprimé.</p>
+                <p>Ce projet n&apos;existe pas ou a été supprimé.</p>
             </div>
         )
     }
@@ -61,9 +62,7 @@ export default async function ProjectDetail({ params }) {
                     <h2>Technologies utilisées</h2>
                     <div className={styles.technologies}>
                         {project.technologies.map((tech, index) => (
-                            <span key={index} className={styles.tech}>
-                                {tech}
-                            </span>
+                            <Tag key={index} isDark={true}>{tech}</Tag>
                         ))}
                     </div>
 
