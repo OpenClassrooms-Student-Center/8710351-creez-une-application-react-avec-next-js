@@ -5,7 +5,7 @@
             "slug": "integrateur-web",
             "description": "Formation en Intégration Web. Apprenez à créer des sites web responsive et accessibles.",
             "tags": ["Bac +2", "9 mois"],
-            "image": "https://oc-static.imgix.net/prod/images/paths/illustrations/900/16994350954043_16564339214407_DEV_Web_Int_web%20%281%29.png?auto=compress,format&q=60&w=300"
+            "image": "/images/formations/integrateur-web.jpg"
         },
         {
             "id": 2,

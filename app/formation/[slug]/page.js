@@ -1,6 +1,28 @@
 import styles from './page.module.css'
 import formationsData from '@/data/formations.json'
 import Tag from '@/components/Tag/Tag'
+import Image from 'next/image'
+
+export async function generateMetadata({ params }) {
+    const { slug } = await params
+    const formation = formationsData.find(p => p.slug === slug)
+
+    if (!formation) {
+        return {
+            title: 'Formation non trouvée',
+        }
+    }
+
+    return {
+        title: `${formation.title} | Portfolio`,
+        description: formation.description,
+        openGraph: {
+            title: formation.title,
+            description: formation.description,
+            images: [formation.image],
+        },
+    }
+}
 
 export default async function FormationDetail({ params }) {
     const { slug } = await params
@@ -25,9 +47,12 @@ export default async function FormationDetail({ params }) {
 
             <div className={styles.content}>
                 <div className={styles.imageWrapper}>
-                    <div className={styles.imagePlaceholder}>
-                        Image de la formation
-                    </div>
+                    <Image
+                        src={formation.image}
+                        alt={formation.title}
+                        width={1200}
+                        height={400}
+                    />
                 </div>
 
                 <div className={styles.details}>

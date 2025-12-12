@@ -1,6 +1,11 @@
 import formationsData from '@/data/formations.json'
 import Card from '@/components/Card/Card'
 
+export const metadata = {
+  title: 'Mes Formations | Portfolio',
+  description: 'Découvrez mes formations de développement web : applications React, sites Next.js et plus encore.',
+}
+
 export default function Formations() {
     
 
