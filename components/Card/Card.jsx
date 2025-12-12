@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import styles from "./Card.module.css"
 import Tag from "../Tag/Tag"
 
@@ -13,10 +14,12 @@ export default function Card({data ,type}){
         >
             {data.image && (
                 <div className={styles.imageWrapper}>
-                    <img 
+                    <Image 
                         src={data.image} 
                         alt={data.title}
                         className={styles.image}
+                        width={500}
+                        height={300}
                     />
                 </div>
             )}

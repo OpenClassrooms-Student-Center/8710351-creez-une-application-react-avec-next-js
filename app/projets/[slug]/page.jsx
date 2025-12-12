@@ -1,8 +1,31 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import Tag from '@/components/Tag/Tag'
 import styles from './page.module.css'
 import projectsData from '@/data/projects.json'
+
+export async function generateMetadata({ params }) {
+    const { slug } = await params
+    const project = projectsData.find(p => p.slug === slug)
+
+    if (!project) {
+        return {
+            title: 'Projet non trouvé',
+        }
+    }
+
+    return {
+        title: `${project.title} | Portfolio`,
+        description: project.longDescription,
+        openGraph: {
+            title: project.title,
+            description: project.shortDescription,
+            images: [project.image],
+        },
+    }
+}
+
 
 
 export default async function ProjectDetail({ params }) {
@@ -25,10 +48,12 @@ export default async function ProjectDetail({ params }) {
             <article>
                 <h1 className="title">{project.title}</h1>
                 <div className={styles.imageWrapper}>
-                    <img 
+                    <Image 
                         src={project.image} 
                         alt={project.title}
                         className={styles.image}
+                        width={800}
+                        height={500}
                     />
                 </div>
                 <div className={styles.tagsContainer}>
