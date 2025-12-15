@@ -39,12 +39,12 @@
 }
 
 .link:hover {
-    color: #465fcd;
+    color: #364AB0;
 }
 
 .active {
-    color: #465fcd;
-    border-bottom: 2px solid #465fcd;
+    color: #364AB0;
+    border-bottom: 2px solid #364AB0;
 }
 
 /* Bouton burger - caché sur desktop */
@@ -115,6 +115,6 @@
     }
 
     .active {
-        border-bottom: 2px solid #465fcd;
+        border-bottom: 2px solid #364AB0;
     }
 }

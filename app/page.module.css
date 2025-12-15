@@ -67,7 +67,7 @@
 /* Bouton principal */
 .btn-primary {
   background-color: white;
-  color: #667eea;
+  color: #364AB0;
 }
 
 .btn-primary:hover {
@@ -84,7 +84,7 @@
 
 .btn-secondary:hover {
   background-color: white;
-  color: #667eea;
+  color: #364AB0;
   transform: translateY(-2px);
 }
 
